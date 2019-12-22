@@ -8,13 +8,15 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 const routes: Routes = [
     { path: 'user/:userName', component: PhotoListComponent },
     { path: 'p/add', component: PhotoFormComponent },
-    { path: '**', component: NotFoundComponent }
+    { path: '**', component: NotFoundComponent }  
 ];
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes) ],
+    imports: [ 
+        RouterModule.forRoot(routes) 
+    ],
     exports: [ RouterModule ]
 })
-export class AppRoutingModule{
+export class AppRoutingModule{ 
 
 }
