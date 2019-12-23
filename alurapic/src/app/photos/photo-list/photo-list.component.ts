@@ -9,7 +9,7 @@ import { PhotoService } from '../photo/photo.service';
   templateUrl: './photo-list.component.html',
   styleUrls: ['./photo-list.component.css']
 })
-export class PhotoListComponent implements OnInit{
+export class PhotoListComponent implements OnInit {
 
   photos: Photo[] = [];
   filter: string = '';
@@ -27,14 +27,13 @@ export class PhotoListComponent implements OnInit{
     this.photos = this.activatedRoute.snapshot.data['photos'];
   }
 
-  load(){
+  load() {
     this.photoService
       .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(photos => {
+        this.filter = '';
         this.photos = this.photos.concat(photos);
-        
-        if(!photos.length){ this.hasMore = false; }
-      })
+        if(!photos.length) this.hasMore = false;
+      });
   }
-
 }

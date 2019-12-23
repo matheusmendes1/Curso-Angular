@@ -9,17 +9,15 @@ import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 const routes: Routes = [
     { 
         path: 'user/:userName', 
-        component: PhotoListComponent, 
+        component: PhotoListComponent,
         resolve:{
             photos: PhotoListResolver
-        } 
+        }
     },
-
     { 
         path: 'p/add', 
         component: PhotoFormComponent 
     },
-    
     { 
         path: '**', 
         component: NotFoundComponent 

@@ -1,4 +1,4 @@
-export interface Photo{
+export interface Photo {
     id:number;
     postDate:Date;
     url:string;
@@ -6,5 +6,5 @@ export interface Photo{
     allowComments:boolean;
     likes:number;
     comments:number;
-    userId:number;   
+    userId:number;     
 }

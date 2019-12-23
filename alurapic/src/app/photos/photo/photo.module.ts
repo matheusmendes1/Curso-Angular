@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [ PhotoComponent ],
-    imports: [ 
-        CommonModule, 
-        HttpClientModule 
+    declarations: [PhotoComponent],
+    imports: [
+        CommonModule,
+        HttpClientModule
     ],
     exports: [ PhotoComponent ]
 })
-export class PhotoModule{ }
+export class PhotoModule { }
