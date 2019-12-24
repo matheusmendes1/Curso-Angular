@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { Observable } from 'rxjs';
 import { User } from '../user/user';
@@ -12,12 +12,10 @@ export class HeaderComponent{
 
     //$ é uma boa pratica pra variaveis que guardam valores de um observable
     user$: Observable<User>;
-    user: User;
 
     constructor(
         private userService: UserService,
         private router:Router) {
-    
         this.user$ = userService.getUser();
     }
     

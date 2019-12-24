@@ -7,17 +7,22 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { SignInComponent } from './home/signin/signin.component';
 import { AuthGuard } from './core/auth/auth.guard';
+import { SignUpComponent } from './home/singup/singup.component';
 
 const routes: Routes = [
     { 
-        path: '', 
+        path: '',
         component: SignInComponent,
-        canActivate: [ AuthGuard ] 
-    },
+        canActivate: [AuthGuard]
+    }, 
+    { 
+        path: 'signup',
+        component: SignUpComponent,
+    },         
     { 
         path: 'user/:userName', 
         component: PhotoListComponent,
-        resolve:{
+        resolve: {
             photos: PhotoListResolver
         }
     },
@@ -37,6 +42,5 @@ const routes: Routes = [
     ],
     exports: [ RouterModule ]
 })
-export class AppRoutingModule{ 
+export class AppRoutingModule { }
 
-}
