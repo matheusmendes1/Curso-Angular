@@ -20,6 +20,7 @@ const routes: Routes = [
     },         
     { 
         path: 'user/:userName', 
+        pathMatch: 'full',
         component: PhotoListComponent,
         resolve: {
             photos: PhotoListResolver
@@ -35,8 +36,12 @@ const routes: Routes = [
         component: PhotoDetailsComponent
     },
     { 
-        path: '**', 
+        path: 'not-found', 
         component: NotFoundComponent 
+    },     
+    { 
+        path: '**', 
+        redirectTo: 'not-found'
     }  
 ];
 

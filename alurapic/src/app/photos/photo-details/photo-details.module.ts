@@ -19,11 +19,11 @@ import { PhotoOwnerOnlyDirective } from './photo-owner-only/photo-owner-only.dir
         PhotoCommentsComponent
     ],
     imports: [
-        CommonModule, 
+        CommonModule,
         PhotoModule,
         RouterModule,
         ReactiveFormsModule,
-        VMessageModule 
+        VMessageModule
     ]
 })
 export class PhotoDetailsModule { }

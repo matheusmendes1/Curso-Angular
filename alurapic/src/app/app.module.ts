@@ -22,4 +22,4 @@ import { CoreModule } from './core/core.module';
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule{ }
